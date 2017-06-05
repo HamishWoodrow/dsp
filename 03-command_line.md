@@ -52,8 +52,8 @@ What does `xargs` do? Give an example of how to use it.
 
 > > Xargs, takes all the lines from the standard input and then concanates these arguments into a new set of inputs and executes this new command.  Such that the following example if $ find *.txt was piped directly to cksum, only one ouput would be returned which would be the addition of all the files with extension .txt. in the directory.  However, if xargs is used then find is run and returns all .txt files which are then become a list of inputs for the command cksum.  Where the command is now cksum {file1}.txt {file2}.txt.  It creates a list of arguments from the standard input
 
-**Example:** find *.txt | xargs cksum
-------------
+>>Example: find *.txt | xargs cksum
+  -------
 
 
 
