@@ -15,6 +15,9 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
+    co=len([j for j in words if len(j) >= 2 and j[0]==j[-1]])
+    return co
+
     raise NotImplementedError
 
 
@@ -32,6 +35,10 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
+
+    n_words=sorted(words, key=lambda x: (x[0]!='x',x))
+    return n_words
+
     raise NotImplementedError
 
 
@@ -45,10 +52,14 @@ def sort_last(tuples):
     >>> sort_last([(1, 3), (3, 2), (2, 1)])
     [(2, 1), (3, 2), (1, 3)]
     >>> sort_last([(2, 3), (1, 2), (3, 1)])
-    [(3, 1), (1, 2), (2, 3)]
+    [(3, 1), (1,  2), (2, 3)]
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
+
+    ls_sort = sorted(tuples, key=lambda x: x[1])
+    return ls_sort
+
     raise NotImplementedError
 
 
@@ -58,7 +69,6 @@ def remove_adjacent(nums):
     elements have been reduced to a single element, so [1, 2, 2, 3]
     returns [1, 2, 3]. You may create a new list or modify the passed
     in list.
-
     >>> remove_adjacent([1, 2, 2, 3])
     [1, 2, 3]
     >>> remove_adjacent([2, 2, 3, 3, 3])
@@ -68,8 +78,12 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
 
+    n_ls = [v for (i,v) in enumerate(nums) if i==0 or v!=nums[i-1]]
+
+    return n_ls
+
+    raise NotImplementedError
 
 def linear_merge(list1, list2):
     """
@@ -85,4 +99,7 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
+
+    return sorted(list1+list2)
+
     raise NotImplementedError

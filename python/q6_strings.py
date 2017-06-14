@@ -18,6 +18,11 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
+    if count<10:
+        return ('Number of donuts: %s' % count)
+    else:
+        return ("Number of donuts: many")
+
     raise NotImplementedError
 
 
@@ -37,6 +42,14 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
+    h = len(s)
+
+    if h>=2:
+        return s[:2]+s[h-2:h]
+    else:
+        return ''
+
+
     raise NotImplementedError
 
 
@@ -56,6 +69,12 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
+    first=s[0]
+
+    out=first+s[1:].replace(first,'*')
+
+    return out
+
     raise NotImplementedError
 
 
@@ -74,6 +93,13 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
+    #swap first letters
+    n_a=b[:2]+a[2:]
+    n_b=a[:2]+b[2:]
+    h=[n_a,n_b]
+
+    return ' '.join(h)
+
     raise NotImplementedError
 
 
@@ -91,8 +117,20 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
 
+    n_s = []
+
+    if len(s)<3:
+        return s
+    else:
+        if s[-3:]=='ing':
+            n_s=s+'ly'
+            return n_s
+        else:
+            n_s=s+'ing'
+            return n_s
+
+    raise NotImplementedError
 
 def not_bad(s):
     """
@@ -111,6 +149,21 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
+    n_s=[]
+    st=s.split()
+    if 'bad' not in s:
+        return s
+    elif 'not' in s:
+        g_pos=s.index('not')
+        b_pos=s.index('bad')
+        if b_pos > g_pos:
+            n_s=s[:g_pos]+'good'+s[b_pos+3:]
+            return n_s
+        else:
+            return s
+    else:
+        return s
+
     raise NotImplementedError
 
 
@@ -130,4 +183,27 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
+
+    h_a=len(a)/2
+    h_b=len(b)/2
+    #Divide up a string
+    if not h_a==int(h_a):
+        a_f=a[:(int(h_a)+1)]
+        a_b=a[-int(h_a):]
+    else:
+        a_f=a[:int(h_a)]
+        a_b=a[-int(h_a):]
+
+    #Divide up b string
+    if not h_b==int(h_b):
+        b_f=b[:(int(h_b)+1)]
+        b_b=b[-int(h_b):]
+    else:
+        b_f=b[:int(h_b)]
+        b_b=b[-int(h_b):]
+
+    new_word=a_f+b_f+a_b+b_b
+    #print ('a_f=%s a_b=%s b_f=%s b_b=%s' % (a_f, a_b, b_f, b_b))
+    return new_word
+
     raise NotImplementedError
