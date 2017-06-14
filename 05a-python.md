@@ -33,7 +33,7 @@ Lists are often used where order is important and there is an interest is storin
 True
 
 #Example of a list:
->>>lsa=[1, 2, 2, 3, 3, 9, 421, 3425]
+>>>lsa=[2,3,421,3425,3,1,2,9]
 >>>lsa.sort()
 >>>print (lsa)
 [1, 2, 2, 3, 3, 9, 421, 3425]
