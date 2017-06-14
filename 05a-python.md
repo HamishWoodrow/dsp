@@ -26,7 +26,7 @@ How are Python lists and sets similar and different? Give examples of using both
 Sets are used often in eliminating duplicates and for comparisons of data sets where the objective is to see common elements between two collections.  Sets are faster when looking for values and finding if a particular element is a member of the data set.
 Lists are often used where order is important and there is an interest is storing all data even if it is non-unique, often lists are used where we need to iterate over the values.  They are great for storing data and iterating through it.
 
-'''python
+```python
 #Example of a set:
 >>>cities = {'New York', 'London', 'Bombay', 'Tokyo'}
 >>>'New York' in basket
@@ -37,7 +37,7 @@ True
 >>>lsa.sort()
 >>>print (lsa)
 [1, 2, 2, 3, 3, 9, 421, 3425]
-
+```
 ---
 
 ### Q3. Lambda Function
@@ -46,9 +46,9 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 >> Lamda is an annonymous function, which does not need defined separately and can be temporarily defined.  They are oftern useful when a quick function is required for single operations.  This can lead to a more readable and compact code.  It is often used in conjunction with filter, map, reduce.  In order to feed functions (generating conditions) to the expressions to manipulate lists.
 
-'''python
+```python
 sorted(['hippo','chicken','ox','lamb','horse'], key=lambda x: (x!='ox',x))
-'''
+```
 
 ---
 
@@ -58,12 +58,12 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> List comprehensions are very succinct ways to generate and transform lists, from a single expression allowing for conditions and loops to be used, much in the same way that mathematical sets are written out.
 
-'''python
+```python
 #examples of list comprehension
 >>>[i**2 for i in range(21) if i%2 == 0] #prints the square of even numbers
 #example with map and filter
 >>>ev_sq=list(map(lambda x: x**2,list(filter(lambda x: x%2==0,range(21)))))
-'''
+```
 
 Due to the use of Lambda the map method can be less efficient, but one of the main advantages of list comprehension is also how it is much clearer.
 
