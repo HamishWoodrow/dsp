@@ -19,22 +19,22 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 #### Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> ScD: 6, PhD: 31, MD: 1, MPH:2, BsEd: 1, MS:2, JD:1, MA:1 and none:1.
 
 
 #### Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> Associate Professor: 12, Professor:13, Assistant Professor: 12
 
 
 #### Q3. Search for email addresses and put them in a list.  Print the list of email addresses.
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> Done
 
 
 #### Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> 4 different domains.
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 
@@ -66,7 +66,7 @@ faculty_dict = { 'Ellenberg': [['Ph.D.', 'Professor', 'sellenbe@upenn.edu'], ['P
 ```
 Print the first 3 key and value pairs of the dictionary:
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> 'Bellamy': [[' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu']], 'Bilker': [['Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu']], 'Bryan': [[' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu']]
 
 #### Q7.  The previous dictionary does not have the best design for keys.  Create a new dictionary with keys as:
 
@@ -76,11 +76,11 @@ professor_dict = {('Susan', 'Ellenberg'): ['Ph.D.', 'Professor', 'sellenbe@upenn
 
 Print the first 3 key and value pairs of the dictionary:
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> ('Scarlett', 'L.', 'Bellamy'): [' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu'], ('Warren', 'B.', 'Bilker'): ['Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu'], ('Matthew', 'W', 'Bryan'): [' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu']
 
 #### Q8.  It looks like the current dictionary is printing by first name.  Print out the dictionary key value pairs based on alphabetical orders of the last name of the professors
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> Done
 
 Place your code in this file: [advanced_python_dict.py](python/advanced_python_dict.py)
 
