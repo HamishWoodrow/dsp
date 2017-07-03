@@ -22,4 +22,4 @@ plt.show()
 ```
 
 >>The random function is almost perfectly normal but some noise exists.
-![pre](img/random.png)
+![pre](../img/random.png)
